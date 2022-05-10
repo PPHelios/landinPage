@@ -34,35 +34,35 @@ const navBarItems = document.getElementById("navbar__list");
  * Begin Main Functions
  * 
  */
-//create a function to loop over the sections array to build li items and append them to the ul  
-sections.forEach(function(section)
+//create a for function to loop over the sections array to build li items and append them to the ul  
+function createLi(x)
 {
-// create a list item for the section
-    listItem = document.createElement("li");
-// insert the list item attributes from the section & added the style
-    listItem.innerHTML =
-      `<li><a href="#${section.id}" class="menu__link" data-nav="${section.id}">${section.dataset.nav}</a></li>`;
-//append the li to the ul
-    navBarItems.appendChild(listItem)
-});
+  for (i = 0; i < x.length; i++)
+  {
+    li = document.createElement("li")
+    li.innerHTML = `<li><a href=#${x[i].id} class="menu__link" a>${x[i].id}</a></li>`
+    navBarItems.appendChild(li)
+  }
+}
+createLi(sections)
 // build the nav
 // Add class 'active' to section when near top of viewport
 // add an on scroll triggered function to loop the sections
-document.addEventListener("scroll", function ()
+document.addEventListener("scroll", function()
 {
   sections.forEach(function(active)
   {
     if
 //the function compares the section element top and bottom to the viewport to keep the section active when it passes the lower half of the vieport till it passes the upper half of the viewport
-    (active.getBoundingClientRect().top < window.innerHeight / 2 &&
-      active.getBoundingClientRect().bottom > window.innerHeight / 2)
+    (active.getBoundingClientRect().top < window.innerHeight / 2 && active.getBoundingClientRect()
+      .bottom > window.innerHeight / 2)
     {
-active.classList.add("your-active-class");
+      active.classList.add("your-active-class");
     }
     else
-    //then it removes the active state
+//then it removes the active state
     {
-active.classList.remove("your-active-class");
+      active.classList.remove("your-active-class");
     }
   })
 });
@@ -70,9 +70,9 @@ active.classList.remove("your-active-class");
 //Selects every <a> element whose href attribute value begins with #
 const anchorList = document.querySelectorAll('a[href^="#"]');
 //create a loop for each section anchor to prevent the default function on click and smooth scroll to the section
-anchorList.forEach(function (anchor)
+anchorList.forEach(function(anchor)
 {
-  anchor.onclick = function (stop)
+  anchor.onclick = function(stop)
   {
     stop.preventDefault();
 //using hash property to locate the section
