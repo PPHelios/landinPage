@@ -33,4 +33,5 @@ For specific, detailed instructions, look at the project instructions in the Uda
 ### Resources :
 
    - A lot of internet search was done on open source sites to understand the new methods suggested by Udacity (ex: getBoundingClientRect()) and i only used the ones that i can fully understand and implement even if they are not the best.
-     
+   
+   - This project was made completely on an android mobile phone.
