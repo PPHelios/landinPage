@@ -1,5 +1,3 @@
-
-
 /**
  * 
  * Manipulating the DOM exercise.
@@ -37,10 +35,8 @@ const navBarItems = document.getElementById("navbar__list");
  * 
  */
 //create a function to loop over the sections array to build li items and append them to the ul  
-function createListItems()
+function createListItems(section)
 {
-  for (section of sections)
-  {
 // create a list item for the section
     listItem = document.createElement("li");
 // insert the list item attributes from the section & added the style
@@ -48,10 +44,9 @@ function createListItems()
       `<li><a href="#${section.id}" class="menu__link" data-nav="${section.id}">${section.dataset.nav}</a></li>`;
 //append the li to the ul
     navBarItems.appendChild(listItem)
-  }
 }
 // build the nav
-createListItems()
+sections.forEach(createListItems)
 // Add class 'active' to section when near top of viewport
 // add an on scroll triggered function to loop the sections
 document.addEventListener("scroll", function ()
