@@ -30,6 +30,8 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
    - Preventing the default action for clicking the anchor links and adding a smooth scroll method.
 
+   - used setTimeout to hide the navbar after scrolling.
+
    - Measured the page loading speed using performance.now() .
 
 ### Resources :
