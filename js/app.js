@@ -86,5 +86,13 @@ anchorList.forEach(function(anchor)
     });
   }
 })
+// Hiding the navbar after scrolling
+// Used an onscroll function to set display style to none
+const hide = document.addEventListener("scroll", function()
+{ document.getElementById("navBar").style.display = "none";			
+});
+// used setTimeout to hide the navbar after 5 seconds of scrolling
+const hideNavBar = setTimeout(hide,2000);
+// used perfmance.now to log page loading speed
 const endingTime = performance.now();
 console.log('This code took ' + (endingTime - startingTime)); 
