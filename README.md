@@ -24,11 +24,13 @@ For specific, detailed instructions, look at the project instructions in the Uda
  
 ##### js added functionalities: 
 
-   - Creating an unordered list each containing the corresponding section attributrs.
+   - Creating an unordered list each containing the corresponding section attributrs using fragment.
 
    - Added active state to the section when reaching half the viewport and remove it after its bottom passes it (not just when the section top is in viewport).
 
    - Preventing the default action for clicking the anchor links and adding a smooth scroll method.
+
+   - Measured the page loading speed using performance.now() .
 
 ### Resources :
 
