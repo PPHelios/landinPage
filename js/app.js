@@ -20,10 +20,12 @@
  * Define Global Variables
  * 
  */
+ const startingTime = performance.now();
 //add all sections to an array
 const sections = Array.from(document.querySelectorAll("section"));
 //add the ul to a const
 const navBarItems = document.getElementById("navbar__list");
+const fragment = document.createDocumentFragment();
 /**
  * End Global Variables
  * Start Helper Functions
@@ -39,12 +41,13 @@ function createLi(x)
 {
   for (i = 0; i < x.length; i++)
   {
-    li = document.createElement("li")
-    li.innerHTML = `<li><a href=#${x[i].id} class="menu__link" a>${x[i].id}</a></li>`
-    navBarItems.appendChild(li)
+    li = document.createElement("li");
+    li.innerHTML = `<li><a href=#${x[i].id} class="menu__link" a>${x[i].id}</a></li>`;
+    fragment.appendChild(li);
   }
 }
 createLi(sections)
+navBarItems.appendChild(fragment);
 // build the nav
 // Add class 'active' to section when near top of viewport
 // add an on scroll triggered function to loop the sections
@@ -83,3 +86,5 @@ anchorList.forEach(function(anchor)
     });
   }
 })
+const endingTime = performance.now();
+console.log('This code took ' + (endingTime - startingTime)); 
