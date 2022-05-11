@@ -55,17 +55,22 @@ document.addEventListener("scroll", function()
 {
   sections.forEach(function(active)
   {
+// query for li navbar button with same section id
+  const item = document.querySelector(" a[href*=" + active.id + "]");
     if
 //the function compares the section element top and bottom to the viewport to keep the section active when it passes the lower half of the vieport till it passes the upper half of the viewport
     (active.getBoundingClientRect().top < window.innerHeight / 2 && active.getBoundingClientRect()
       .bottom > window.innerHeight / 2)
     {
-      active.classList.add("your-active-class");
+active.classList.add("your-active-class");
+// change the color for the navButton for the section in view port
+ item.style.backgroundColor ="red";
     }
     else
-//then it removes the active state
+//then it removes the active state for section and navButton when out of viewport
     {
-      active.classList.remove("your-active-class");
+active.classList.remove("your-active-class");
+item.style.backgroundColor = "#fff" ;
     }
   })
 });
@@ -88,11 +93,11 @@ anchorList.forEach(function(anchor)
 })
 // Hiding the navbar after scrolling
 // Used an onscroll function to set display style to none
-const hide = document.addEventListener("scroll", function()
-{ document.getElementById("navBar").style.display = "none";			
-});
-// used setTimeout to hide the navbar after 5 seconds of scrolling
-const hideNavBar = setTimeout(hide,2000);
+//const hide = document.addEventListener("scroll", function()
+//{ document.getElementById("navBar").style.display = "none";			
+//});
+// used setTimeout to hide the navbar after 2 seconds of scrolling
+//const hideNavBar = setTimeout(hide,2000);
 // used perfmance.now to log page loading speed
 const endingTime = performance.now();
-console.log('This code took ' + (endingTime - startingTime)); 
+console.log("This code took " + (endingTime - startingTime)+" to load"); 
