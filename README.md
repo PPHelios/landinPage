@@ -1,13 +1,3 @@
-# Landing Page Project
-
-### Aim of the project:
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
-
 ### Project exuction:
 
 ##### index file updates:
@@ -20,7 +10,7 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
 ##### css file updates: 
 
-   - Added a red border to the active section to make active state while scrolling more visible.
+   - Added a red border to the active section to make active state while scrolling more visible. (Removed)
  
 ##### js added functionalities: 
 
@@ -30,7 +20,7 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
    - Preventing the default action for clicking the anchor links and adding a smooth scroll method.
 
-   - used setTimeout to hide the navbar after scrolling.
+   - used setTimeout to hide the navbar after scrolling. (Deactivated)
 
    - Measured the page loading speed using performance.now() .
 
