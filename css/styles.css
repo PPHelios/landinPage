@@ -68,7 +68,9 @@ section {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    
 }
+
 
 .navbar__menu li {
     display: inline-block;
@@ -196,7 +198,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-  
+    
 }
 
 section.your-active-class .landing__container::before {
@@ -221,4 +223,26 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+/* Added a responsive navbar if screen (width<600px) it will justify the anchors,reduce font size , change font color and add transparent background */
+@media screen and (max-width:600px) 
+  .navbar__menu ul {	   
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.75em;
+    
+  }
+  
+ .page__header {    
+    background-color: transparent;
+  }   
+       
+  .navbar__menu .menu__link {
+    color: #cccc11 ;
+    border-radius: 10%;				    
+  }
+    
+  .navbar__menu .menu__link:hover {
+    color: #a14a37 ;       
+  }
 }
