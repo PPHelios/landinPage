@@ -64,13 +64,13 @@ document.addEventListener("scroll", function()
     {
 active.classList.add("your-active-class");
 // change the color for the navButton for the section in view port
- item.style.backgroundColor ="red";
+ item.style.backgroundColor ="#57a5c9";
     }
     else
 //then it removes the active state for section and navButton when out of viewport
     {
 active.classList.remove("your-active-class");
-item.style.backgroundColor = "#fff" ;
+item.style.backgroundColor = "transparent" ;
     }
   })
 });
@@ -91,6 +91,16 @@ anchorList.forEach(function(anchor)
     });
   }
 })
+function responsive (){
+				const navBar=document.getElementById("navBar");
+				if (navBar.className == "nav__bar")
+				{
+							navBar.className += "responsive";
+				}
+				else {
+								navBar.className = "nav__bar"
+				}
+}
 // Hiding the navbar after scrolling
 // Used an onscroll function to set display style to none
 //const hide = document.addEventListener("scroll", function()
